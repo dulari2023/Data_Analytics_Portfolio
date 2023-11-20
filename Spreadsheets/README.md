@@ -1,4 +1,4 @@
-Welcome to the world of data analytics with Spreadsheets! 
+Welcome to the world of data analysis with Spreadsheets! 
 
 In this folder, you will find a project that showcases my proficiency in data analysis using Spreadsheets. Spreadsheets are powerful tools for managing, analyzing, and visualizing data, especially for small datasets.
 
