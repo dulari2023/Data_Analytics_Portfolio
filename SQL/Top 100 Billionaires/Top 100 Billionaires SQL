@@ -1,1 +1,4 @@
+– Let's start by introducing the table.
 
+SELECT *
+FROM `case-studies-405816.Top_100_billionaires.Billionaires_info` 
