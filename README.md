@@ -1,7 +1,7 @@
-# Data_Analyst_Portfolio
+# Data_Analytics_Portfolio
 
 
-Welcome to My Portfolio!
+Welcome to My Data Analytics Portfolio!
 
 I am a recent graduate with an MSc in Mathematics and professional certificates in Data Analysis. My expertise includes Spreadsheets, SQL, Tableau, Python, and R, with a solid understanding of data analytics techniques such as data cleaning, analysis, visualization, report writing, and critical thinking.
 
