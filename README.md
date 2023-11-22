@@ -10,4 +10,4 @@ In addition to my technical skills, I take pride in my strong analytical, proble
 
 Confident in my data analytics skills and experience, I believe I am an ideal candidate for any analyst role. I hope you find my portfolio informative and engaging, and I welcome the opportunity to discuss my qualifications further with you.
 
-Thank you for your time; I look forward to hearing from you soon.
+Thank you for considering my portfolio. I look forward to hearing from you soon.
