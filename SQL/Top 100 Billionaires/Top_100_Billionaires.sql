@@ -84,11 +84,3 @@ FROM `case-studies-405816.Top_100_billionaires.Billionaires_info`
 --Oldest
 SELECT MAX(AGE) AS oldest_age,
 FROM `case-studies-405816.Top_100_billionaires.Billionaires_info` 
-
---New -
-
-
-
-
-
-
