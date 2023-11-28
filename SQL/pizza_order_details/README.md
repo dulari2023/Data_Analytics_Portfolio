@@ -4,7 +4,7 @@ Case Study Questions:
 
 1. Find the total quantity of each pizza ordered.
 2. Which type of pizza (pizza_id) was ordered on 2015.12.31?
-3. What is the most popular pizza size?
+3. What is the most popular pizza type?
 4. What is the most popular pizza_id in December?
 5. Find the total revenue for each month.
 6. Find the total revenue for each pizza category.
