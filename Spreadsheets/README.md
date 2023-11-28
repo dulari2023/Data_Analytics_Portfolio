@@ -2,7 +2,7 @@ Welcome to data analysis with Spreadsheets!
 
 In this folder, you will find a project that showcases my proficiency in data analysis using Spreadsheets. Spreadsheets are powerful tools for managing, analyzing, and visualizing data, especially for small datasets.
 
-Using the Google sheet links below, you will find my case study that illustrates the trends in cyclists' bike usage among annual members and casual riders. The dataset used for this analysis is a publicly available real dataset on cycling trips. You can access the below Google Sheets links, which demonstrate how I analyzed cyclists' data for three consecutive months. The cleaned data for January, February, and March is presented in the first sheet of 
+Here, you will find my case study that illustrates the trends in cyclists' bike usage among annual members and casual riders. The dataset used for this analysis is a publicly available real dataset on cycling trips. You can access the below Google Sheets links, which demonstrate how I analyzed cyclists' data for three consecutive months. The cleaned data for January, February, and March is presented in the first sheet of 
 - Trip_Data_Jan(https://docs.google.com/spreadsheets/d/15Sly9XjiS3FvSsSfleA6X8UUf-jpxv7ulObMiwtu7GA/edit#gid=547640407), 
 - Trip_Data_Feb(https://docs.google.com/spreadsheets/d/19XB-FloWBslXLwJ3h3tuFw098QxeCd3IpVY4mIaTETI/edit#gid=1246554853),
 - Trip_Data_Mar(https://docs.google.com/spreadsheets/d/12n7Eo1Y8CfwIVFLv9OwQL6cai9S7CpfTozB91UU_tGc/edit#gid=182595476).
