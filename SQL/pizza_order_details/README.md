@@ -8,7 +8,7 @@ Case Study Questions:
 4. What is the most popular pizza_id in December?
 5. Find the total revenue for each month.
 6. Find the total revenue for each pizza category.
-7. What is the busiest time in the dataset?
+7. Find the order count during the busiest hour in the dataset.
 8. How much pizza was ordered each day?
 9. Find the total revenue for each pizza size.
 10. Find the total pizza count for each pizza size.
