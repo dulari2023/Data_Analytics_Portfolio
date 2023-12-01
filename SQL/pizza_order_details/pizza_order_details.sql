@@ -168,7 +168,7 @@ GROUP BY
  
 
  
--- 9. Find the total revenue for each pizza size.
+-- 9. Find the total revenue for XL pizza size.
 
 SELECT
   pp.size,
@@ -177,6 +177,8 @@ FROM
   `case-studies-405816.Pizza_info.order_info` AS oi
 JOIN
   `case-studies-405816.Pizza_info.pizza_prices` AS pp ON oi.pizza_id = pp.pizza_id
+WHERE 
+  size = "XL"
 GROUP BY
   pp.size
 
