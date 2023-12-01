@@ -75,18 +75,18 @@ LIMIT 1;
 -- 4. What was the most popular pizza_id in December?
 
 SELECT
- oi.pizza_id,
- COUNT(oi.quantity) as OrderCount
+  oi.pizza_id,
+  COUNT(oi.quantity) as OrderCount
 FROM
- `case-studies-405816.Pizza_info.order_info` AS oi
+  `case-studies-405816.Pizza_info.order_info` AS oi
 JOIN
- `case-studies-405816.Pizza_info.order_dates` od ON oi.order_id = od.order_id
+  `case-studies-405816.Pizza_info.order_dates` od ON oi.order_id = od.order_id
 WHERE
- EXTRACT(MONTH FROM od.date) = 12
+  EXTRACT(MONTH FROM od.date) = 12
 GROUP BY
- oi.pizza_id
+  oi.pizza_id
 ORDER BY
- OrderCount DESC
+  OrderCount DESC
 LIMIT 1;
 
 
