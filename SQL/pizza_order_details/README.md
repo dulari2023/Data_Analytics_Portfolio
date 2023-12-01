@@ -10,6 +10,6 @@ Case Study Questions:
 6. Find the most purchased pizza_id for each day with its quantity.
 7. Find the total order count during the busiest hour in the dataset.
 8. Find the total revenue for each pizza category.
-9. Find the total revenue for each pizza size.
+9. Find the total revenue for XL pizza size.
 10. Find the total pizza count for each pizza size.
 
