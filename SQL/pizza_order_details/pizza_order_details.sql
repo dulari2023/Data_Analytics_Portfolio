@@ -55,7 +55,7 @@ WHERE
 
 
 
--- 3. What is the most popular pizza type?
+-- 3. What was the most popular pizza type?
 
 SELECT
   pp.pizza_type_id,
@@ -72,7 +72,7 @@ LIMIT 1;
 
 
 
--- 4. What is the most popular pizza_id in December?
+-- 4. What was the most popular pizza_id in December?
 
 SELECT
  oi.pizza_id,
@@ -107,19 +107,31 @@ GROUP BY
 
 
 
--- 6. Find the total revenue for each pizza category.
+-- 6. Find the most purchased pizza_id for each day with its quantity.
 
-SELECT
-  pt.category,
-  SUM(pp.price*oi.quantity) AS TotalRevenue
-FROM
-  `case-studies-405816.Pizza_info.pizza_prices` AS pp
-JOIN
-  `case-studies-405816.Pizza_info.order_info` AS oi ON oi.pizza_id = pp.pizza_id
-JOIN
-  `case-studies-405816.Pizza_info.pizza_types` AS pt ON pp.pizza_type_id = pt.pizza_type_id
-GROUP BY
-  pt.category
+WITH rank_table AS (
+  SELECT 
+    od.date,
+    oi.pizza_id,
+	  SUM(quantity) AS order_count,
+    Dense_rank() OVER (PARTITION BY od.date ORDER BY SUM(quantity) DESC) AS dr
+  FROM `case-studies-405816.Pizza_info.order_info` AS oi
+  JOIN
+    `case-studies-405816.Pizza_info.order_dates` AS od ON oi.order_id = od.order_id
+  GROUP BY
+    od.date,
+    oi.pizza_id
+)
+SELECT 
+  r.date,
+  r.pizza_id,
+  r.order_count
+FROM 
+  rank_table r
+WHERE 
+  r.dr = 1
+ORDER BY
+  r.date ASC
 
 
  
@@ -140,25 +152,22 @@ LIMIT 1;
 
 
 
---8. How much pizza was ordered each day?
+ -- 8. Find the total revenue for each pizza category.
 
 SELECT
-  EXTRACT(MONTH FROM od.date) as Month,
-  EXTRACT(DAY FROM od.date) as Day,
-  SUM(oi.quantity) as OrderCount,
+  pt.category,
+  SUM(pp.price*oi.quantity) AS TotalRevenue
 FROM
-  `case-studies-405816.Pizza_info.order_info` AS oi
+  `case-studies-405816.Pizza_info.pizza_prices` AS pp
 JOIN
-  `case-studies-405816.Pizza_info.order_dates` AS od ON oi.order_id = od.order_id
+  `case-studies-405816.Pizza_info.order_info` AS oi ON oi.pizza_id = pp.pizza_id
+JOIN
+  `case-studies-405816.Pizza_info.pizza_types` AS pt ON pp.pizza_type_id = pt.pizza_type_id
 GROUP BY
-  Month,
-  Day
-ORDER BY
-  Month,
-  Day ASC
-
+  pt.category
  
 
+ 
 -- 9. Find the total revenue for each pizza size.
 
 SELECT
