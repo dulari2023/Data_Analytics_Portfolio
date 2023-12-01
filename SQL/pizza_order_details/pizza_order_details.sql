@@ -94,16 +94,16 @@ LIMIT 1;
 -- 5. Find the total revenue for each month.
 
 SELECT
- EXTRACT(MONTH FROM od.date) as Month,
- SUM(oi.quantity*op.price) as TotalIncome
+  EXTRACT(MONTH FROM od.date) as Month,
+  SUM(oi.quantity*op.price) as TotalIncome
 FROM
- `case-studies-405816.Pizza_info.order_info` AS oi
+  `case-studies-405816.Pizza_info.order_info` AS oi
 JOIN
- `case-studies-405816.Pizza_info.order_dates` AS od ON oi.order_id = od.order_id
+  `case-studies-405816.Pizza_info.order_dates` AS od ON oi.order_id = od.order_id
 JOIN
- `case-studies-405816.Pizza_info.pizza_prices` AS op ON oi.pizza_id = op.pizza_id
+  `case-studies-405816.Pizza_info.pizza_prices` AS op ON oi.pizza_id = op.pizza_id
 GROUP BY
- Month;
+  Month;
 
 
 
