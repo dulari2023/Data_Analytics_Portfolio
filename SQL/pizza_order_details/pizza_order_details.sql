@@ -113,7 +113,7 @@ WITH rank_table AS (
   SELECT 
     od.date,
     oi.pizza_id,
-	  SUM(quantity) AS order_count,
+    SUM(quantity) AS order_count,
     Dense_rank() OVER (PARTITION BY od.date ORDER BY SUM(quantity) DESC) AS dr
   FROM `case-studies-405816.Pizza_info.order_info` AS oi
   JOIN
