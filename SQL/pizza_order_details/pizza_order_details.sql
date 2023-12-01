@@ -135,7 +135,7 @@ ORDER BY
 
 
  
--- 7. Find the order count during the busiest hour in the dataset.
+-- 7. Find the total order count during the busiest hour in the dataset.
 
 SELECT
   EXTRACT(HOUR FROM od.time) as Hour,
