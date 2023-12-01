@@ -45,13 +45,13 @@ GROUP BY
 -- 2. Which type of pizza (pizza_id) was ordered on 2015.12.31?
 
 SELECT
- DISTINCT(oi.pizza_id)
+  DISTINCT(oi.pizza_id)
 FROM
- `case-studies-405816.Pizza_info.order_info` AS oi
+  `case-studies-405816.Pizza_info.order_info` AS oi
 JOIN
- `case-studies-405816.Pizza_info.order_dates` od ON oi.order_id = od.order_id
+  `case-studies-405816.Pizza_info.order_dates` od ON oi.order_id = od.order_id
 WHERE
- od.date = '2015-12-31';
+  od.date = '2015-12-31';
 
 
 
