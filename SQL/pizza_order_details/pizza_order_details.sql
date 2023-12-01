@@ -135,17 +135,28 @@ ORDER BY
 
 
  
--- 7. Find the total order count during the busiest hour in the dataset.
+-- 7. In which part of the day did customers order the most?
 
-SELECT
-  EXTRACT(HOUR FROM od.time) as Hour,
-  SUM(oi.quantity) as OrderCount,
-FROM
-  `case-studies-405816.Pizza_info.order_info` AS oi
-JOIN
-  `case-studies-405816.Pizza_info.order_dates` AS od ON oi.order_id = od.order_id
+WITH ToD_table AS (
+  SELECT 
+  order_id,
+  CASE
+    WHEN time BETWEEN "12:00:00" AND "17:59:59" THEN "Afternoon"
+    WHEN time BETWEEN "18:00:00" AND "23:59:59" THEN "Night"
+    ELSE "Morning"
+  END AS `Time_of_day`
+  FROM 
+    `case-studies-405816.Pizza_info.order_dates` AS od
+)
+SELECT 
+  tod.Time_of_day,
+  SUM(oi.quantity) as OrderCount
+FROM 
+  ToD_table AS tod
+JOIN 
+  `case-studies-405816.Pizza_info.order_info` AS oi ON oi.order_id = tod.order_id
 GROUP BY
-  Hour
+  tod.Time_of_day
 ORDER BY
   OrderCount DESC
 LIMIT 1;
