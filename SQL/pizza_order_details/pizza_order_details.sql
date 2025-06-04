@@ -135,7 +135,7 @@ ORDER BY
 
 
  
--- 7. In which part of the day did customers order the most?
+-- 7. Which part of the day had the highest order volume?
 
 WITH ToD_table AS (
   SELECT 
