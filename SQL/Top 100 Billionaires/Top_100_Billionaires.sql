@@ -85,7 +85,7 @@ FROM
    `case-studies-405816.Top_100_billionaires.Billionaires_info` 
 
 
--- 8.   How many billionaires in the dataset are above the average of the net worth in the dataset?
+-- 8.   How many billionaires in the dataset are above the average net worth?
 
 SELECT 
    COUNT(*) AS number_of_billionaires_above_average
@@ -105,7 +105,7 @@ WHERE
    AGE > 60;
 
 
--- 10.   What is the youngest and oldest age of the billionaires in the dataset?
+-- 10.   What are the youngest and oldest ages of the billionaires in the dataset?
 
 --Youngest
 SELECT 
